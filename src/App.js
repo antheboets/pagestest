@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import LocalizedStrings from 'react-localization';
+import localizationData from './localization/localization.js';
 
 function App() {
+
+  let strings = new LocalizedStrings(localizationData);
+  strings.setLanguage('nl');
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +22,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>I hope this works</p>
+        <p>{strings.getLanguage() + ": "  + strings.hope}</p>
       </header>
     </div>
   );
