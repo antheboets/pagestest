@@ -2,8 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import LocalizedStrings from 'react-localization';
 import localizationData from './localization/localization.js';
+import React from 'react';
 
 function App() {
+
+  React.useEffect(()=>{
+    console.log("print only one time")
+  },[])
 
   let strings = new LocalizedStrings(localizationData);
   strings.setLanguage('nl');
