@@ -28,6 +28,7 @@ function App() {
           Learn React
         </a>
         <p>{strings.getLanguage() + ": "  + strings.hope}</p>
+        <a className="App-link"  href="https://github.com/antheboets/pagestest" target="_blank" rel="noopener noreferrer">link to repo</a>
       </header>
     </div>
   );
